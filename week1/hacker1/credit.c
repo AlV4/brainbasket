@@ -27,7 +27,14 @@ int main(void)
     }
     array = getArray(cardNumber);
     
-    checkCardType();
+    if(!checkEvenOdd())
+    {
+        printf("INVALID\n");
+    }
+    else
+    {
+        checkCardType();    
+    }
 }
 
 void checkCardType()
@@ -91,19 +98,21 @@ bool checkEvenOdd()
         int temp = 0;
         if(i % 2 == 0)
         {
-            res+=array[i];
-        }
-        else
-        {
-            temp = array[i] * 2;
+        temp = array[i] * 2;
             if(temp >= 10)
             {
                 temp-=9;
             }
         odd+=temp;
         }
+        else
+        {
+           res+=array[i];
+        }
+        printf("%d",array[i]);
     }
     res+=odd;
+
         
     if(res % 10 == 0){
         return true;
