@@ -4,12 +4,12 @@
 
 int main()
 {
-	//const int system = 2;
-	
+	// create counters, base, input number vars
 	int count, i, ncount, n, base;
 	
 	printf("Please give me the base from 2 to 10\n");
 	
+	// get base
 	do{
 	base = GetInt();
 	}while(base < 2 || base > 10);
@@ -21,7 +21,7 @@ int main()
 	}
 	int d = 1;
 	
-	// length of the binary number
+	// length of the number
 	count = 0;
 	printf("Please enter the decimal positive integer, which you want to convert\n");
 	do{
@@ -33,7 +33,7 @@ int main()
 		d = d * base;
 		count++;
 	}
-	while (d*base <= n);
+	while (d * base <= n);
 	ncount = count;
 
 	// filling array by desired digits
