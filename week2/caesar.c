@@ -16,10 +16,10 @@ int main(int argc,  string argv[])
     string in;
     do
     {
-        in = GetString();
-        
+        in = get_string();
+
     }while(in == NULL || strlen(in) == 0);
-    
+
     for(int i = 0, n = strlen(in); i < n; i++)
     {
         encodeChar(k, in[i]);

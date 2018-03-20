@@ -8,9 +8,9 @@ int main(void)
     bool lastprinted = true;
     string s;
     do{
-        s = GetString();
+        s = get_string();
     }while(s == NULL || strlen(s) == 0);
-    
+
     for(int i = 0, n = strlen(s); i < n; i++)
     {
         char c = s[i];

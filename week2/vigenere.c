@@ -16,7 +16,7 @@ int main(int argc,  string argv[])
         return 1;
     }
     string key = argv[1];
-    
+
     if(!checkKeyWord(key))
     {
         printf("Keyword should contain only letters!\n")    ;
@@ -25,13 +25,13 @@ int main(int argc,  string argv[])
     keyArr = getKeyArray(key);
     int keyLength = strlen(key);
     string in;
-    
+
     do
     {
-        in = GetString();
-        
+        in = get_string();
+
     }while(in == NULL || strlen(in) == 0);
-    
+
     for(int i = 0, k = 0, n = strlen(in); i < n; i++)
     {
         k %= keyLength;
